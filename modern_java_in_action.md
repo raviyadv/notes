@@ -1,24 +1,61 @@
-Modern Java in Action — Chapter 1 Notes (Layman’s Guide)
-1. Why Did Java Need to Change?
-Java had to keep up with faster computers and better programming needs.
+# Modern Java in Action — Chapter 1 Notes (Layman’s Guide)
 
-Multi-core CPUs mean programs can do many things at once.
+## 1. Why Did Java Need to Change?
 
-Developers want clearer and simpler code.
+- Java had to keep up with faster computers and better programming needs.
+- Multi-core CPUs mean programs can do many things at once.
+- Developers want clearer and simpler code.
+- Modern problems require new tools.
 
-Modern problems require new tools.
+## 2. Big New Features in Java 8+
 
-2. Big New Features in Java 8+
-Lambda Expressions: Small anonymous functions.
+- **Lambda Expressions:** Small anonymous functions.
+- **Streams API:** Work on data collections like a conveyor belt.
+- **Optional:** Safe way to avoid null errors.
+- **Default Methods:** Interfaces can have actual methods.
+- **Modules (Java 9):** Organize code like boxes.
+- **Type Inference (Java 10):** Use `var` instead of full types.
+- **New HTTP Client (Java 11):** Easier web calls.
 
-Streams API: Work on data collections like a conveyor belt.
+## 3. Simple Example: Print names starting with “A”
 
-Optional: Safe way to avoid null errors.
+**Old way:**
 
-Default Methods: Interfaces can have actual methods.
+```java
+List<String> names = Arrays.asList("Alice", "Bob", "Anna", "Mike");
+for (String name : names) {
+    if (name.startsWith("A")) {
+        System.out.println(name);
+    }
+}
+```
 
-Modules (Java 9): Organize code like boxes.
+New way with streams and lambda:
 
-Type Inference (Java 10): Use var instead of full types.
+```java
+names.stream()
+     .filter(name -> name.startsWith("A"))
+     .forEach(System.out::println);
+```
 
-New HTTP Client (Java 11): Easier web calls.
+## 4. Practice Task 1: Filter names starting with “M”
+
+```java
+List<String> names = Arrays.asList("Mike", "John", "Mona", "Alice", "Max");
+// Print only names starting with 'M' using streams and lambdas
+```
+
+## 5. Practice Task 2: Use Optional to safely get a nickname
+```java
+String getNickname(String username) {
+    if (username.equals("Mike")) {
+        return "Mikey";
+    }
+    return null;
+}
+```
+## Summary
+- Java 8+ helps write clean, concise code.
+- Lambdas and streams make working with lists easier.
+- Optional helps avoid null-related bugs.
+- Newer Java versions add modularity and easier coding.
