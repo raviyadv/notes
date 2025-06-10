@@ -1,4 +1,4 @@
-# Modern Java in Action — Chapter 1 Notes
+# Modern Java in Action — Chapter 1
 
 ## 1. Why Did Java Need to Change?
 
