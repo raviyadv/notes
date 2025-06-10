@@ -37,23 +37,6 @@ names.stream()
      .filter(name -> name.startsWith("A"))
      .forEach(System.out::println);
 ```
-
-## 4. Practice Task 1: Filter names starting with “M”
-
-```java
-List<String> names = Arrays.asList("Mike", "John", "Mona", "Alice", "Max");
-// Print only names starting with 'M' using streams and lambdas
-```
-
-## 5. Practice Task 2: Use Optional to safely get a nickname
-```java
-String getNickname(String username) {
-    if (username.equals("Mike")) {
-        return "Mikey";
-    }
-    return null;
-}
-```
 ## Summary
 - Java 8+ helps write clean, concise code.
 - Lambdas and streams make working with lists easier.
